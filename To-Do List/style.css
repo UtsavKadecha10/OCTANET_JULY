@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9e9999;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #8b8b8b;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+h1 {
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form div{
+    border: 1px solid #796f6f;
+    margin:10px;
+    padding: 3px;
+    /* width: 1000px; */
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px #000000;
+}
+
+input {
+    flex: 0.7;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: #8b8b8b;  
+}
+
+select{
+    height: 39px;   
+    background-color: #757474;
+    border: #615f5f;
+    border-radius: 7px;
+}
+
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px #000000;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: 1px solid #615f5f;
+    height: 50px;
+    border-radius: 7px;
+    box-shadow: 7px 7px 10px #000000;
+}
+ 
+li span{
+    flex: 1;
+    margin: 0 10px;
+}
+
+li .priority {
+    margin-right: 10px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #000000;
+}
+
+li .label {
+    margin-right: 10px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #000000;
+}
+
+li .progress {
+    width: 50%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+li .progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s;
+}
+
+li button {
+    margin-left: 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* .low{
+    color: #4caf50;
+}
+.medium{
+color: #eb9047;
+}
+.high{
+color: #f44336;
+} */
