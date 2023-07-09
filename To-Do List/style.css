@@ -11,8 +11,8 @@ body {
     margin: 20px auto;
     background-color: #8b8b8b;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+    border-radius: 40px;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 1);
 }
 
 h1 {
@@ -33,7 +33,7 @@ form div{
     padding: 3px;
     /* width: 1000px; */
     border-radius: 10px;
-    box-shadow: 3px 3px 4px #000000;
+    box-shadow: 3px 3px 6px #000000;
 }
 
 input {
@@ -78,7 +78,7 @@ li {
     border: 1px solid #615f5f;
     height: 50px;
     border-radius: 7px;
-    box-shadow: 7px 7px 10px #000000;
+    box-shadow: 7px 7px 14px #000000;
 }
  
 li span{
@@ -112,6 +112,7 @@ li .progress-bar {
     height: 100%;
     background-color: #4caf50;
     transition: width 0.3s;
+    border-radius: 2px;
 }
 
 li button {

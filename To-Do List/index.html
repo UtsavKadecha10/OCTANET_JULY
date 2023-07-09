@@ -39,22 +39,28 @@
     </div>
 
     <script>
-        const form = document.getElementById('todo-form');
+       const form = document.getElementById('todo-form');
         const input = document.getElementById('todo-input');
         const prioritySelect = document.getElementById('priority');
         const deadlineInput = document.getElementById('deadline');
         const labelSelect = document.getElementById('label');
         const list = document.getElementById('todo-list');
 
+        // Retrieve the saved tasks from localStorage (if any)
+        let savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        // Sort tasks based on priority
+        savedTasks.sort((a, b) => {
+            const priorityOrder = { low: 1, medium: 2, high: 3 };
+            return priorityOrder[a.priority] - priorityOrder[b.priority];
+        });
 
         // Populate the tasks from localStorage on page load
         savedTasks.forEach(task => {
             createTaskElement(task);
         });
 
-        form.addEventListener('submit', function (event) {
+        form.addEventListener('submit', function(event) {
             event.preventDefault();
             const task = input.value.trim();
             const priority = prioritySelect.value;
@@ -62,36 +68,46 @@
             const label = labelSelect.value;
 
             if (task !== '') {
-                const taskObj = { task, priority, deadline, label, progress: 0};
+                const taskObj = {
+                    task,
+                    priority,
+                    deadline,
+                    label,
+                    progress: 0 // Add progress property with initial value of 0
+                };
                 createTaskElement(taskObj);
                 savedTasks.push(taskObj);
+
+                // Sort tasks based on priority
+                savedTasks.sort((a, b) => {
+                    const priorityOrder = { low: 1, medium: 2, high: 3 };
+                    return priorityOrder[a.priority] - priorityOrder[b.priority];
+                });
 
                 // Save the tasks to localStorage
                 localStorage.setItem('tasks', JSON.stringify(savedTasks));
 
                 input.value = '';
                 deadlineInput.value = '';
-                prioritySelect.value = 'Select';
-                labelSelect.value = 'None'
             }
         });
 
         function createTaskElement(taskObj) {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
-        <span>${taskObj.task}</span>
-        <small>${taskObj.deadline}</small>
-        <span class="priority ${taskObj.priority}">${taskObj.priority}</span>
-        <span class="label ${taskObj.label}">${taskObj.label}</span>
-        <div class="progress">
-            <div class="progress-bar" style="width: ${taskObj.progress}%;"></div>
-        </div>
-        <button class="delete-btn">Delete</button>
-    `;
+                <span>${taskObj.task}</span>
+                <small>${taskObj.deadline}</small>
+                <span class="priority ${taskObj.priority}">${taskObj.priority}</span>
+                <span class="label ${taskObj.label}">${taskObj.label}</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: ${taskObj.progress}%;"></div>
+                </div>
+                <button class="delete-btn">Delete</button>
+            `;
             list.appendChild(listItem);
 
             const deleteBtn = listItem.querySelector('.delete-btn');
-            deleteBtn.addEventListener('click', function () {
+            deleteBtn.addEventListener('click', function() {
                 listItem.remove();
                 removeTaskFromLocalStorage(taskObj);
             });
@@ -99,7 +115,7 @@
             const progressBar = listItem.querySelector('.progress-bar');
             listItem.addEventListener('click', function() {
                 if (taskObj.progress < 100) {
-                    taskObj.progress += 10;
+                    taskObj.progress += 25;
                     progressBar.style.width = `${taskObj.progress}%`;
 
                     if (taskObj.progress >= 100) {
