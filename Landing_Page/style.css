@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Calistoga&family=Dancing+Script:wght@700&family=Fasthand&family=Yatra+One&family=Ysabeau&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    color: blanchedalmond;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)), url("images/background.jpg");
+    background-size:cover;
+    font-family: sans-serif;
+    box-shadow: 1px 20px 7px black;
+}
+a{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:blanchedalmond;
+    color: rgb(172, 171, 171);
+    /* margin: 0.2rem; */
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    
+}
+nav ul li a:hover{
+    color: white;
+}
+
+nav ul li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 50%;
+    bottom: 0;
+    line-height: 4px;
+    background: white;
+    height: 2px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+nav ul li a:hover:before,
+nav ul li a:focus:before,
+nav ul li a:active:before {
+    left: 0;
+    right: 0;
+}
+.navbar{
+    box-shadow: 1px 2px 7px black;
+}
+nav{
+    font-family: 'Calistoga', cursive;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    box-shadow: 1px 2px 7px black;
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+.searchInput{
+    border-radius: 10px;
+    width: 450px;
+    height: 35px;
+    background-color: blanchedalmond;
+}
+.searchButton{
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    background-color: #332929;
+    color: white;
+    border: 0px solid #332929;
+}
+
+.nav1 ul li{
+    margin: 0 2rem;
+
+}
+.nav2 ul li{
+    margin: 0 4rem;
+}
+
+.orderButton {
+    display: block;
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    text-align: center;
+    line-height: 4rem;
+}
+.orderButton h2{
+    /* line-height: 5rem; */
+    font-family: 'Fasthand', cursive;
+    font-size: xxx-large;
+    color: blanchedalmond;
+
+}
+.orderButton button{
+    border-radius:7px;
+    border: 1px solid blanchedalmond;
+    width: 100px;
+    height: 50px;
+    transition: 0.3s;
+    background: transparent;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+.orderButton button:hover{
+    background-color: blanchedalmond;
+    color: black
+}
+main{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgb(15, 11, 11);
+    height:100vh;
+}
+main div ul li{
+    margin:2rem;
+}
+.main_head{
+    text-align: center;
+    color: blanchedalmond
+}
+.jewellery_card ul li {
+    color: rgb(172, 171, 171);
+    margin-right: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 0px blanchedalmond;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    
+}
+.jewellery_card li:hover{
+    box-shadow: 0.4rem 0.4rem 0.4rem blanchedalmond;
+}
+
+.rings{
+    border: 0px solid blanchedalmond;
+    border-radius: 1rem;
+    width:21.775rem;
+}
+
+
+.ring_images img {
+    border-radius: 1rem;
+    width:21.775rem;
+}
+
+
+main div ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    
+    background-color: #201b1b;;
+    text-align: center;
+}
