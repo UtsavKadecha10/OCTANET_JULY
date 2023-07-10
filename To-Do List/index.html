@@ -51,7 +51,7 @@
 
         // Sort tasks based on priority
         savedTasks.sort((a, b) => {
-            const priorityOrder = { low: 1, medium: 2, high: 3 };
+            const priorityOrder = { Low: 3, Medium: 2, High: 1 };
             return priorityOrder[a.priority] - priorityOrder[b.priority];
         });
 
@@ -115,7 +115,7 @@
             const progressBar = listItem.querySelector('.progress-bar');
             listItem.addEventListener('click', function() {
                 if (taskObj.progress < 100) {
-                    taskObj.progress += 25;
+                    taskObj.progress += 10;
                     progressBar.style.width = `${taskObj.progress}%`;
 
                     if (taskObj.progress >= 100) {
