@@ -37,7 +37,6 @@ form div{
     border-radius: 10px;
     box-shadow: 3px 3px 6px #000000;
     background: linear-gradient(rgb(163, 158, 158), rgba(0, 0, 0, 0.32));
-
 }
 
 input {
@@ -48,8 +47,6 @@ input {
     border-radius: 7px;
     background-color: #8b8b8b;  
     background: linear-gradient(rgb(131, 124, 124), rgba(0, 0, 0, 0.2));
-
-    
 }
 
 select{
@@ -57,8 +54,7 @@ select{
     background-color: #757474;
     border: #615f5f;
     border-radius: 7px;
-        background: linear-gradient(rgb(131, 124, 124), rgba(0, 0, 0, 0.2));
-
+    background: linear-gradient(rgb(131, 124, 124), rgba(0, 0, 0, 0.2));
 }
 
 
@@ -72,7 +68,6 @@ button {
     cursor: pointer;
     box-shadow: 1px 1px 4px #000000;
     margin-right:5px;
-
 }
 
 ul {
