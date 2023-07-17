@@ -90,17 +90,19 @@ header .login {
 
 header .login button {
     /* width: 200px; */
+    height: 40px;
     font-size: 16px;
-    background-color: white;
-     /* border-color: white; */
-     border-radius: 7px;
+    padding: 10px;
+    border-radius: 7px;
+    
     /* box-shadow: 0 2px 4px 0 swhite; */
 
 }
 
 header .login button img{
-    vertical-align: bottom;
-    margin-right: 2px;
+    vertical-align: top;
+    color: white   ;
+    margin-right: 3px;
 }
 header .login button .down{
     vertical-align: middle;
@@ -195,22 +197,12 @@ header .cart svg {
     align-items: center;
 }
 
-.section-4-offers {
-    width: 230px;
-    height: 100%;
-    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/1e483f8045ec13a8.jpg?q=90');
-    background-position: bottom;
-    background-repeat: no-repeat;
+
+
+.section-4-offers-viewall img {
+    width: 230px;   
 }
 
-.section-4-offers-viewall {
-    margin-top: 132px;
-    width: 100%;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .section-4-offers-viewall button {
     margin-top: 24px;
@@ -230,6 +222,7 @@ header .cart svg {
     height: 100%;
     width: calc(100% - 230px);
     display: flex;
+    
     overflow-x: auto;
 }
 
@@ -245,7 +238,8 @@ header .cart svg {
 
 .section-4-item img {
     max-width: 200px;
-    max-height: 200px;
+    height: 160px;
+    
 }
 
 .section-4-item-head {
@@ -278,6 +272,9 @@ header .cart svg {
     width: 33%;
 }
 
+.section-6  img{
+    width: 100%;
+}
 /* footer */
 footer {
     margin-top: 26px;
