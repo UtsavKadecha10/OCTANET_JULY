@@ -34,7 +34,7 @@ header .nav-container {
     /* justify-content: space-around; */
 }
 
-header .nav-container .logo {
+header .nav-container .logo a{
     display: flex;
     min-width: 137px;
     justify-content: flex-end;
@@ -94,21 +94,24 @@ header .login button {
     font-size: 16px;
     padding: 10px;
     border-radius: 7px;
-    
+    background-color: white;
     /* box-shadow: 0 2px 4px 0 swhite; */
 
 }
-
+header .login button a{
+    color: black;
+}
 header .login button img{
     vertical-align: top;
     color: white   ;
+
     margin-right: 3px;
 }
 header .login button .down{
     vertical-align: middle;
 }
 
-header .become-seller {
+header .become-seller a{
     height: 100%;
     display: flex;
     align-items: center;
@@ -119,7 +122,7 @@ header .become-seller {
 }
 
 
-header .cart {
+header .cart a{
     height: 100%;
     display: flex;
     align-items: center;
@@ -150,7 +153,7 @@ header .cart svg {
 
 }
 
-.section-1-item {
+.section-1-item a{
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -226,7 +229,7 @@ header .cart svg {
     overflow-x: auto;
 }
 
-.section-4-item {
+.section-4-item a{
     width: 232px;
     height: 100%;
     padding: 0px 15px;
@@ -234,7 +237,9 @@ header .cart svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: scale3d(5px);
 }
+
 
 .section-4-item img {
     max-width: 200px;
@@ -272,7 +277,7 @@ header .cart svg {
     width: 33%;
 }
 
-.section-6  img{
+.section-6 a img{
     width: 100%;
 }
 /* footer */
@@ -312,6 +317,7 @@ footer {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .footer2 {
